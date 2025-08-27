@@ -1,0 +1,4 @@
+name: mmcore
+version: '1.0-SNAPSHOT'
+main: win.mattgod.mmcore.Mmcore
+api-version: '1.21'
