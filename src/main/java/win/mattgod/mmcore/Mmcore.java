@@ -9,6 +9,7 @@ public final class Mmcore extends JavaPlugin {
         registerCommand("announce", new AnnounceCommand());
         registerCommand("gmc", new GmcCommand());
         registerCommand("gms", new GmsCommand());
+        registerCommand("spawn", new SpawnCommand());
     }
 
     @Override

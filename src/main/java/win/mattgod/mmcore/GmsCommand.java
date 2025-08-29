@@ -20,7 +20,7 @@ public class GmsCommand implements BasicCommand {
             return;
         }
 
-        source.getSender().sendRichMessage("<green>Gamemode set to survival.");
+        source.getExecutor().sendRichMessage("<green>Gamemode set to survival.");
         p.setGameMode(GameMode.SURVIVAL);
     }
 
