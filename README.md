@@ -5,4 +5,5 @@ Minecraft EssentialsX replacement plugin.
 /gmc - Set gamemode to creative `mmcore.gmc.use`  
 /gms - Set gamemode to survival `mmcore.gms.use`  
 /announce [message] - Make announcement to server `mmcore.announce.use`  
-/spawn - Teleport to world spawn point (use minecraft's /setworldspawn to change spawnpoint) `mmcore.spawn.use`  
+/setspawn - Set server spawn to current position `mmcore.setSpawn.use`  
+/spawn - Teleport to server spawn point `mmcore.spawn.use`  
