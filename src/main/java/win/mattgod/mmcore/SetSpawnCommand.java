@@ -9,11 +9,11 @@ import org.jspecify.annotations.Nullable;
 import win.mattgod.mmcore.utils.LocationUtil;
 
 @NullMarked
-public class SpawnCommand implements BasicCommand {
+public class SetSpawnCommand implements BasicCommand {
 
     private final Mmcore plugin;
 
-    public SpawnCommand(Mmcore plugin) {
+    public SetSpawnCommand(Mmcore plugin) {
         this.plugin = plugin;
     }
 
@@ -21,20 +21,20 @@ public class SpawnCommand implements BasicCommand {
     public void execute(CommandSourceStack source, String[] args) {
 
         Player p = (Player) source.getExecutor();
-        Location spawn = LocationUtil.loadLocation(plugin, "spawn-location");
 
         if (args.length != 0) {
             source.getSender().sendRichMessage("<red>This command does not take any arguments.");
             return;
         }
 
-        source.getExecutor().sendRichMessage("<green>Teleporting you to spawn.");
-        p.teleport(spawn);
+        source.getExecutor().sendRichMessage("<green>Server spawn set.");
+        LocationUtil.saveLocation(plugin, "spawn-location", p.getLocation());
+
 
     }
 
     @Override
     public @Nullable String permission() {
-        return "mmcore.spawn.use";
+        return "mmcore.setSpawn.use";
     }
 }
